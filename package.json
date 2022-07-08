@@ -1,7 +1,7 @@
 {
-  "name": "@ant-design/tools",
-  "version": "15.2.0-alpha.2",
-  "description": "tools for ant design",
+  "name": "gdcd-tools",
+  "version": "15.2.0-1",
+  "description": "tools for gdcd",
   "keywords": [
     "react",
     "tools"
@@ -17,9 +17,12 @@
   },
   "license": "MIT",
   "bin": {
-    "antd-tools": "./bin/antd-tools.js"
+    "gdcd-tools": "./bin/antd-tools.js"
   },
   "scripts": {
+    "bootstrap": "git remote add upstream https://github.com/ant-design/antd-tools.git",
+    "pull": "git checkout master && git pull --rebase upstream master",
+    "merge": "git checkout gdc && git rebase master",
     "pub": "git push origin && npm publish --access public",
     "postinstall": "node lib/init.js",
     "lint": "eslint lib",
